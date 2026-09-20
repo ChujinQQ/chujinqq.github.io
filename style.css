@@ -1,0 +1,33 @@
+body {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+nav {
+    margin-bottom: 40px;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
