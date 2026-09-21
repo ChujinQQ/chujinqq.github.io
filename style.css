@@ -10,6 +10,27 @@ header {
     margin-bottom: 30px;
 }
 
+/* ---- name + university logo (logo sits to the right of the heading) ---- */
+
+.name-row {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.name-row h1 {
+    margin: 0;
+    line-height: 1.25;
+}
+
+.university-logo {
+    display: block;
+    height: 52px;
+    width: auto;
+    flex: none;
+}
+
 nav {
     margin-bottom: 40px;
 }
@@ -30,4 +51,117 @@ h1 {
 h2 {
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
+}
+
+/* ---- Highlights gallery: two rows of three ---- */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 22px;
+    margin-top: 26px;
+}
+
+.gallery figure {
+    margin: 0;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.gallery figcaption {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #666;
+}
+
+/* ---- Links ---- */
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 26px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+}
+
+.link-list li {
+    display: flex;
+}
+
+.link-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+    text-decoration: none;
+    transition: border-color .18s ease, box-shadow .18s ease,
+                transform .18s ease;
+}
+
+.link-list a:hover {
+    border-color: #999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .07);
+    transform: translateY(-1px);
+}
+
+.link-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a56a8;
+}
+
+.link-desc {
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #666;
+}
+
+.link-arrow {
+    flex: none;
+    font-size: 15px;
+    color: #bbb;
+    transition: color .18s ease, transform .18s ease;
+}
+
+.link-list a:hover .link-arrow {
+    color: #1a56a8;
+    transform: translate(2px, -2px);
+}
+
+@media (max-width: 720px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 470px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .name-row {
+        gap: 14px;
+    }
+
+    .university-logo {
+        height: 34px;
+    }
 }
