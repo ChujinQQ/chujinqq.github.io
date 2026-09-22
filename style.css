@@ -231,7 +231,7 @@ h2 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px 22px;
+    gap: 26px 22px;
     margin-top: 26px;
 }
 
@@ -239,12 +239,18 @@ h2 {
     margin: 0;
 }
 
+/* The source media do not share one ratio: the kinetic-scheme clips are
+   ~6:5 (1.20) and the still frames are 4:3 (1.33). The tile therefore takes
+   the ratio in between (5:4) and the image is *contained* inside it, so
+   nothing is ever cropped; the leftover strip is the same white as every
+   figure background, so it reads as padding rather than a letterbox.
+   A single shared tile ratio keeps the captions aligned across a row. */
 .gallery img {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    background: #fafafa;
+    aspect-ratio: 5 / 4;
+    object-fit: contain;
+    background: #fff;
     border: 1px solid #ddd;
     border-radius: 3px;
 }
