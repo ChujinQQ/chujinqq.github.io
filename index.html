@@ -9,15 +9,6 @@
 
 <body>
 
-<header>
-    <div class="name-row">
-        <h1>Chujin Qin</h1>
-        <img class="university-logo" src="images/SEUlogo.png"
-             alt="Southeast University">
-    </div>
-    <p>Ph.D. Candidate in Mechanical Engineering, Southeast University, China</p>
-</header>
-
 <div class="layout">
 
 <nav>
@@ -33,6 +24,15 @@
 </nav>
 
 <main>
+
+<header>
+    <div class="name-row">
+        <h1>Chujin Qin</h1>
+        <img class="university-logo" src="images/SEUlogo.png"
+             alt="Southeast University">
+    </div>
+    <p>Ph.D. Candidate in Mechanical Engineering, Southeast University, China</p>
+</header>
 
 <section id="about">
     <h2>About Me</h2>
@@ -244,7 +244,20 @@
                     A discrete kinetic scheme for simulating anisotropic
                     liquid&ndash;solid phase transition with thermal convection.
                 </span>
-                <span class="talk-tag">Poster</span>
+                <!-- The Poster tag links to the file in downloads/, so it can be
+                     clicked to download. Copy this pattern for other talks. -->
+                <a class="talk-tag" href="downloads/2025_NETP_Poster.pdf"
+                   download>
+                    Poster
+                    <svg class="talk-icon" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2.4"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <path d="M12 3.5v11"/>
+                        <path d="M7 10.5 12 15.5l5-5"/>
+                        <path d="M5 20.5h14"/>
+                    </svg>
+                </a>
             </div>
             <span class="talk-venue">
                 <em>The 1st International Symposium on Non-Equilibrium Transport

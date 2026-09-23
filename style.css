@@ -10,15 +10,18 @@ html {
     scroll-behavior: smooth;
 }
 
+/* The header lives inside the main column, so the navigation column starts at
+   the very top of the page, level with the name. */
 header {
     margin-bottom: 38px;
 }
 
-/* ---- name + university logo (logo sits to the right of the heading) ---- */
+/* ---- name + university logo: name on the left, logo on the far right ---- */
 
 .name-row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 22px;
     flex-wrap: wrap;
 }
@@ -95,6 +98,12 @@ h1 {
 h2 {
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
+}
+
+/* The first heading of the main column drops its default top margin so that
+   the name block and the body text below it keep an even rhythm. */
+.layout main > section:first-of-type > h2 {
+    margin-top: 0;
 }
 
 /* ---- Research Interests: compact keyword chips ---- */
@@ -213,6 +222,29 @@ h2 {
     text-transform: uppercase;
     color: #1a56a8;
     white-space: nowrap;
+}
+
+/* ---- tag that carries a downloadable file: same pill, but clickable ---- */
+
+a.talk-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    transition: background .16s ease, border-color .16s ease,
+                color .16s ease;
+}
+
+a.talk-tag:hover {
+    background: #1a56a8;
+    border-color: #1a56a8;
+    color: #fff;
+}
+
+.talk-icon {
+    width: 11px;
+    height: 11px;
+    flex: none;
 }
 
 .talk-venue {
